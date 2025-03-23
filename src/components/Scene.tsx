@@ -4,7 +4,6 @@ import { Environment, Grid } from '@react-three/drei'
 import { Physics } from '@react-three/cannon'
 import Character from './Character'
 import Ground from './Ground'
-import { useGameStore } from '../store/GameStore'
 import { Group } from 'three'
 
 const Scene = () => {
