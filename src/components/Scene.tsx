@@ -5,11 +5,12 @@ import { Physics } from '@react-three/cannon'
 import Character from './Character'
 import Ground from './Ground'
 import { useGameStore } from '../store/GameStore'
+import { Group } from 'three'
 
 const Scene = () => {
-  const sceneRef = useRef()
+  const sceneRef = useRef<Group>(null)
 
-  useFrame((state, delta) => {
+  useFrame(() => {
     // Update game logic here
   })
 

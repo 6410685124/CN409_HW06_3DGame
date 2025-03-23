@@ -2,13 +2,14 @@ import { useRef, useEffect } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { useBox } from '@react-three/cannon'
 import { useKeyboard } from '../hooks/useKeyboard'
+import { Mesh } from 'three'
 
 const MOVEMENT_SPEED = 5
 const RUNNING_SPEED = 8
 const JUMP_FORCE = 5
 
 const Character = () => {
-  const [ref, api] = useBox(() => ({
+  const [ref, api] = useBox<Mesh>(() => ({
     mass: 1,
     position: [0, 1, 0],
     args: [1, 2, 1],
