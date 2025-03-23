@@ -23,7 +23,7 @@ const Character = () => {
     api.velocity.subscribe((v) => (velocity.current = v))
   }, [])
 
-  useFrame((state) => {
+  useFrame(() => {
     const speed = run ? RUNNING_SPEED : MOVEMENT_SPEED
     const direction = [0, 0, 0]
 
